@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DebtTrack – Track Your Debt. Reclaim Your Life.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DebtTrack: A private, UK-focused debt tracker app for Android. Track, analyse, and pay down your debts. 100% local, secure, and easy to use.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
+  <style>
+    :root {
+      --primary: #073255;
+      --accent: #10cfc9;
+      --background: #f9fbfd;
+      --text: #172233;
+      --card: #fff;
+      --shadow: 0 2px 16px rgba(7,50,85,0.08);
+      --border-radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 40px 0 30px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 12px 0;
+      font-size: 2.4rem;
+      letter-spacing: -2px;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0 0 10px 0;
+      font-size: 1.1rem;
+    }
+    .slogan {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+    main {
+      max-width: 740px;
+      margin: 40px auto 32px auto;
+      padding: 0 16px;
+    }
+    section {
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border-radius: var(--border-radius);
+      padding: 32px 22px 26px 22px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    ul {
+      margin: 16px 0 0 0;
+      padding-left: 22px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .features-list {
+      list-style: '✔️ ';
+    }
+    .icon-row {
+      font-size: 1.5em;
+      margin: 14px 0;
+      letter-spacing: 2px;
+    }
+    .screenshots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 18px;
+      margin-bottom: 6px;
+    }
+    .screenshots img {
+      width: 160px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      background: #eee;
+      object-fit: cover;
+    }
+    .github-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-size: 1.12rem;
+      font-weight: bold;
+      margin: 18px 0 0 0;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(16,207,201,0.09);
+      border: none;
+      cursor: pointer;
+    }
+    .github-btn:hover {
+      background: #14e7d9;
+    }
+    @media (max-width: 700px) {
+      main, section {
+        padding: 0 6px;
+      }
+      .screenshots img { width: 110px; }
+    }
+    footer {
+      text-align: center;
+      color: #5b6c89;
+      font-size: 1rem;
+      padding: 24px 0 12px 0;
+      background: #f0f5fa;
+      border-top: 1px solid #e7ecf3;
+      position: relative;
+    }
+    .footer-company {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    .footer-company img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(7,50,85,0.07);
+      background: #fff;
+      border: 1px solid #e3e3e3;
+    }
+    .disclaimer {
+      font-size: 0.95rem;
+      color: #b51a19;
+      background: #fff6f6;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-top: 18px;
+      margin-bottom: 0;
+      border: 1px solid #ffe0e0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DebtTrack</h1>
+    <div class="slogan">Track your debt. Reclaim your life.</div>
+    <p>📱 For Android · 🇬🇧 UK Users · 🔒 100% Private</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Why DebtTrack?</h2>
+      <p>
+        DebtTrack was created by someone on their own debt-free journey. It’s built to be simple, private, and supportive — for real people, not finance experts. No accounts, no ads, no hidden catches. <strong>Your data never leaves your device.</strong>
+      </p>
+      <div class="icon-row">
+        💷 🎉 🔒
+      </div>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul class="features-list">
+        <li>Add and track multiple debts</li>
+        <li>View progress with bars &amp; percentages</li>
+        <li>Overpayment &amp; one-off payment support</li>
+        <li>Debt analysis: interest, payoff time, totals</li>
+        <li>Friendly, motivating UI (haptics (future release), confetti, sounds (future release))</li>
+        <li>100% local data storage (no cloud, no login)</li>
+        <li>Export or reset your data at any time</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Screenshots</h2>
+      <div class="screenshots">
+        <!-- Replace src with your screenshot images -->
+        <img src="screenshot1.jpg" alt="DebtTrack Home Screen">
+        <img src="screenshot2.jpg" alt="Add Debt Screen">
+        <img src="screenshot3.jpg" alt="Debt Analysis">
+      </div>
+    </section>
+
+    <section>
+      <h2>How It Works</h2>
+      <ul>
+        <li><strong>Download:</strong> Google Play Store</li>
+        <li><strong>Add your debts:</strong> Name, amount, interest, monthly payment</li>
+        <li><strong>Track &amp; update:</strong> Each month, update your progress — see how quickly you’re paying down what you owe (monthly payments calculated automatically)!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pricing</h2>
+      <ul>
+        <li>One-time purchase (no subscriptions, no ads, all future releases)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Data &amp; Privacy</h2>
+      <ul>
+        <li>No accounts, no tracking, no cloud</li>
+        <li>All data stays on your device</li>
+        <li>Uninstalling or changing phones will erase your data unless you export first</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Support &amp; Feedback</h2>
+      <p>
+        Have questions or feedback?<br>
+        Open an issue by sending an email: <a href="mailto:devonshirelogic@email.com">devonshirelogic@gmail.com</a>
+      </p>
+    </section>
+
+    <section class="disclaimer">
+      <strong>Disclaimer:</strong> DebtTrack is a supportive tool, not a substitute for professional financial advice. Calculations are estimates and may not be accurate for all loan types.
+    </section>
+  </main>
+
+  <footer>
+    Made with ❤️ in the UK &middot; &copy; 2025 DebtTrack
+    <div class="footer-company">
+      <img src="devonshire-logo.png" alt="Devonshire Logic Logo">
+      <span>Built by <strong>Devonshire Logic</strong></span>
+    </div>
+  </footer>
+</body>
+</html>
