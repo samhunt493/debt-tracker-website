@@ -1,336 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DebtTrack – Track Your Debt. Reclaim Your Life.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DebtTrack: A private, UK-focused debt tracker app for Android. Track, analyse, and pay down your debts. 100% local, secure, and easy to use.">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForeverFound – Animal Microchipping</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    :root {
-      --primary-bg: #112D4E;
-      --secondary-bg: #1A4066;
-      --accent: #1DE9B6;
-      --accent-light: #A5C9EA;
-      --card-bg: #1A4066;
-      --stat-bg: #153e5e;
-      --header-text: #fff;
-      --subtitle: #A5C9EA;
-      --gold: #FFD700;
-      --white: #fff;
-      --text: #fff;
-      --shadow: 0 2px 16px rgba(7,50,85,0.08);
-      --border-radius: 18px;
-    }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: var(--primary-bg);
-      color: var(--text);
-      min-height: 100vh;
-      line-height: 1.7;
-      font-size: 18px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f8f6;
+      color: #333;
     }
     header {
-      background: var(--primary-bg);
-      color: var(--header-text);
-      padding: 38px 0 28px 0;
+      background-color: #3e7e7e;
+      color: white;
       text-align: center;
-      position: relative;
+      padding: 3rem 1rem;
     }
-    .logo-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 12px;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
-    .logo-img {
-      width: 55px;
-      height: 55px;
-      object-fit: contain;
-      border-radius: 10px;
-      background: #fff;
-      margin-bottom: 8px;
-      box-shadow: 0 2px 8px rgba(17,233,182,0.09);
-      border: 2px solid var(--accent);
-    }
-    .logo-text {
-      font-size: 3.8rem;
-      font-weight: bold;
-      color: var(--accent);
-      letter-spacing: 2px;
-      margin-bottom: 5px;
-      margin-top: 0;
-    }
-    .header-subtitle {
+    header p {
       font-size: 1.2rem;
-      color: var(--subtitle);
-      margin-bottom: 6px;
-      margin-top: 0;
-      font-weight: 400;
     }
-    .header-slogan {
-      color: var(--gold);
-      font-size: 1.1rem;
-      font-style: italic;
-      margin-bottom: 12px;
-      margin-top: 0;
-    }
-    .playstore-btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #112D4E;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 10px 24px;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      margin-top: 8px;
-      margin-bottom: 6px;
-      transition: background 0.18s, color 0.18s;
-      box-shadow: 0 2px 8px rgba(16,233,182,0.09);
-      border: none;
-      cursor: pointer;
-    }
-    .playstore-btn:hover {
-      background: #00b996;
-      color: #fff;
-    }
-    main {
-      max-width: 740px;
-      margin: 38px auto 0px auto;
-      padding: 0 12px;
-    }
-    section {
-      background: var(--card-bg);
-      box-shadow: var(--shadow);
-      border-radius: var(--border-radius);
-      padding: 30px 22px 24px 22px;
-      margin-bottom: 30px;
-    }
-    h2 {
-      color: var(--accent);
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    ul {
-      margin: 16px 0 0 0;
-      padding-left: 0;
-      list-style: none;
-    }
-    li {
-      margin-bottom: 10px;
+    .logo-placeholder {
+      width: 150px;
+      height: 150px;
+      background-color: #ffffff33;
+      border: 2px dashed #fff;
+      border-radius: 50%;
+      margin: 2rem auto;
       display: flex;
-      align-items: flex-start;
-    }
-    .bullet {
-      color: var(--accent);
-      font-size: 1.2em;
-      margin-right: 12px;
-      line-height: 1.3;
-      font-weight: bold;
-      margin-top: 2px;
-    }
-    .li-text {
-      color: var(--accent-light);
-      font-size: 1.08em;
-    }
-    .icon-row {
-      font-size: 1.5em;
-      margin: 10px 0;
-      letter-spacing: 2px;
-    }
-    .screenshots {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+      align-items: center;
       justify-content: center;
-      margin-top: 12px;
-      margin-bottom: 6px;
+      color: #ffffffcc;
+      font-size: 0.9rem;
     }
-    .screenshots img {
-      width: 190px;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-      background: #eee;
-      object-fit: cover;
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
     }
-    .github-btn {
-      display: inline-block;
-      background: var(--stat-bg);
-      color: var(--accent);
-      text-decoration: none;
-      padding: 10px 24px;
-      border-radius: 30px;
+    .content h2 {
+      color: #2c5f5f;
+    }
+    .content p {
       font-size: 1.1rem;
-      font-weight: bold;
-      margin: 20px 0 0 0;
-      transition: background 0.2s, color 0.18s;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(16,233,182,0.09);
+      line-height: 1.6;
     }
-    .github-btn:hover {
-      background: var(--accent);
-      color: #112D4E;
+    .contact-box {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #eaf3f1;
+      border-radius: 8px;
     }
-    @media (max-width: 700px) {
-      main, section {
-        padding: 0 6px;
-      }
-      .screenshots img { width: 105px; }
+    .contact-box p {
+      margin: 0.5rem 0;
+    }
+    .socials {
+      margin-top: 1rem;
+    }
+    .socials a {
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+      color: #3e7e7e;
+      text-decoration: none;
     }
     footer {
       text-align: center;
-      color: var(--accent-light);
-      font-size: 1rem;
-      padding: 20px 0 12px 0;
-      background: var(--secondary-bg);
-      border-top: 1px solid #163a5f;
-      position: relative;
-      margin-top: 38px;
-    }
-    .footer-company {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 13px;
-      margin-top: 10px;
-      font-size: 1rem;
-    }
-    .footer-company img {
-      width: 34px;
-      height: 34px;
-      object-fit: contain;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(17,233,182,0.09);
-      background: #fff;
-      border: 1px solid var(--accent);
-    }
-    .disclaimer {
-      font-size: 0.98rem;
-      color: var(--gold);
-      background: #143059;
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-top: 18px;
-      margin-bottom: 0;
-      border: 1px solid #ffe0e022;
-      font-style: italic;
-      text-align: center;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: underline;
-    }
-    a:hover {
-      color: var(--gold);
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-wrapper">
-      <div class="logo-text">DebtTrack</div>
-    </div>
-    <div class="header-subtitle">Track your debt. Reclaim your life.</div>
-    <div class="header-slogan">📱 For Android · 🇬🇧 UK Users · 🔒 100% Private</div>
-    <a class="playstore-btn" href="https://play.google.com/store/apps/details?id=com.devonshirelogic.debttrack&pcampaignid=web_share" target="_blank" rel="noopener">
-      Get it on Google Play
-    </a>
+    <div class="logo-placeholder">Your Logo Here</div>
+    <h1>ForeverFound</h1>
+    <p>Microchipping Service for Dogs, Cats & Small Pets</p>
   </header>
 
-  <main>
-    <section>
-      <h2>Why DebtTrack?</h2>
-      <p class="li-text">
-        DebtTrack was created by someone on their own debt-free journey. It’s built to be simple, private, and supportive — for real people, not finance experts. No accounts, no ads, no hidden catches. <strong>Your data never leaves your device.</strong>
-      </p>
-      <div class="icon-row">
-        💷 🎉 🔒
+  <div class="content">
+    <h2>Peace of Mind for Pet Owners</h2>
+    <p>
+      ForeverFound is a friendly animal microchipping service based in the UK, dedicated to ensuring your beloved pets can always find their way home. We specialize in microchipping dogs, cats, and small animals — providing a simple, one-time solution that lasts a lifetime.
+    </p>
+    <p>
+      ForeverFound is proudly run by Chloe and based in Torrington, Devon.
+    </p>
+    <p>
+      We offer two convenient options: you can come to us, or we can travel to you for a small additional cost.
+    </p>
+
+    <div class="contact-box">
+      <h3>Get a No Obligation Quote</h3>
+      <p>Contact us through our <strong>Instagram page</strong> below.</p>
+      <div class="socials">
+        <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
-    </section>
-
-    <section>
-      <h2>Features</h2>
-      <ul>
-        <li><span class="bullet">✔</span><span class="li-text">Add and track multiple debts</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">View progress with bars &amp; percentages</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">Overpayment &amp; one-off payment support</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">Debt analysis: interest, payoff time, totals</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">Friendly, motivating UI (haptics, confetti, sounds)</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">100% local data storage (no cloud, no login)</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">Export or reset your data at any time</span></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Screenshots</h2>
-      <div class="screenshots">
-        <!-- Replace src with your screenshot images -->
-        <img src="screenshot1.jpg" alt="DebtTrack Home Screen">
-        <img src="screenshot2.jpg" alt="Add Debt Screen">
-        <img src="screenshot3.jpg" alt="Debt Progress">
-      </div>
-    </section>
-
-    <section>
-      <h2>How It Works</h2>
-      <ul>
-        <li>
-          <span class="bullet">✔</span>
-          <span class="li-text">
-            <strong>Download:</strong>
-            <a href="https://play.google.com/store/apps/details?id=com.devonshirelogic.debttrack&pcampaignid=web_share" target="_blank" rel="noopener">
-              Google Play Store
-            </a>
-          </span>
-        </li>
-        <li><span class="bullet">✔</span><span class="li-text"><strong>Add your debts:</strong> Name, amount, interest, monthly payment</span></li>
-        <li><span class="bullet">✔</span><span class="li-text"><strong>Track &amp; update:</strong> Each month, update your progress — see how quickly you’re paying down what you owe (calculated automatically)!</span></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Pricing</h2>
-      <ul>
-        <li><span class="bullet">✔</span><span class="li-text">One-time purchase (no subscriptions, no ads)</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">UK VAT and Play Store fees included in price</span></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Data &amp; Privacy</h2>
-      <ul>
-        <li><span class="bullet">✔</span><span class="li-text">No accounts, no tracking, no cloud</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">All data stays on your device</span></li>
-        <li><span class="bullet">✔</span><span class="li-text">Uninstalling or changing phones will erase your data unless you export first</span></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Support &amp; Feedback</h2>
-      <p class="li-text">
-        Have questions or feedback?<br>
-        Open an issue on <a href="https://github.com/yourusername/DebtTrack" target="_blank" rel="noopener">GitHub</a> or email: <a href="mailto:your@email.com">your@email.com</a>
-      </p>
-    </section>
-
-    <section class="disclaimer">
-      <strong>Disclaimer:</strong> DebtTrack is a supportive tool, not a substitute for professional financial advice. Calculations are estimates and may not be accurate for all loan types.
-    </section>
-  </main>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 DebtTrack
-    <div class="footer-company">
-      <img src="devonshire-logo.png" alt="Devonshire Logic Logo">
-      <span>Built by <strong style="color: var(--accent);">Devonshire Logic</strong></span>
-    </div>
+    &copy; 2025 ForeverFound. All rights reserved.
   </footer>
 </body>
 </html>
